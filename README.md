@@ -1,5 +1,6 @@
 # DanSoftTech-Hosting-Platform
-Windows Server 2025, Cloudflare Tunnel, Apache/XAMPP, Active Directory, OpenSSH/SFTP and multi-site hosting infrastructure.
+
+Infrastructure Lab based on Windows Server 2025, Cloudflare Tunnel, Apache/XAMPP, Active Directory, OpenSSH/SFTP, and multi-site hosting.
 
 ## Provisionamento de Subdomínios no Windows Server 2025
 
@@ -11,8 +12,33 @@ Documentação operacional para criação e publicação de novos subdomínios u
 * OpenSSH/SFTP
 * Active Directory
 * FileZilla
+* MikroTik RouterOS
 
----
+## Ambiente
+
+### Infraestrutura Física
+
+- SERVER2025
+- NVMe Kingston 1TB
+- 16GB RAM
+- Nobreak PW 2000
+- Ambiente climatizado
+- Estação Ryzen 5 5600GT com 32GB RAM
+
+### Servidor
+- Windows Server 2025
+- NVMe SSD 1TB
+- 16GB RAM
+- Apache/XAMPP
+- Cloudflare Tunnel
+- OpenSSH Server
+- Active Directory
+
+### Estação de Gerenciamento
+- AMD Ryzen 5 5600GT
+- 32GB RAM
+- FileZilla
+- Visual Studio Code
 
 ## Arquitetura
 
@@ -32,7 +58,7 @@ SFTP Chroot
 
 ---
 
-# 1. Criar rota DNS no Cloudflare Tunnel
+## 1. Criar rota DNS no Cloudflare Tunnel
 
 Exemplo:
 
@@ -48,7 +74,7 @@ sc query Cloudflared
 
 ---
 
-# 2. Criar pasta do site
+## 2. Criar pasta do site
 
 CMD:
 
@@ -64,7 +90,7 @@ mkdir C:\xampp\htdocs\suporte
 
 ---
 
-# 3. Adicionar no config.yml
+## 3. Adicionar no config.yml
 
 Adicionar na penúltima linha:
 
@@ -75,7 +101,7 @@ Adicionar na penúltima linha:
 
 ---
 
-# 4. Backup do VirtualHost
+## 4. Backup do VirtualHost
 
 ```powershell
 if (!(Test-Path "C:\Backup")) {
@@ -91,7 +117,7 @@ Copy-Item `
 
 ---
 
-# 5. Adicionar VirtualHost
+## 5. Adicionar VirtualHost
 
 ```apache
 <VirtualHost *:80>
@@ -112,7 +138,7 @@ Copy-Item `
 
 ---
 
-# 6. Validar e reiniciar Apache
+## 6. Validar e reiniciar Apache
 
 ```powershell
 Stop-Service Apache2.4 -Force -ErrorAction SilentlyContinue
@@ -128,7 +154,7 @@ Get-Service Apache2.4
 
 ---
 
-# 7. Reiniciar Cloudflare
+## 7. Reiniciar Cloudflare
 
 ```powershell
 taskkill /F /IM cloudflared.exe
@@ -142,7 +168,7 @@ Get-Service Cloudflared
 
 ---
 
-# 8. Validar DNS
+## 8. Validar DNS
 
 ```powershell
 nslookup suporte.dansoftech.com.br
@@ -156,7 +182,7 @@ Resolve-DnsName suporte.dansoftech.com.br
 
 ---
 
-# 9. Criar Symlink SFTP
+## 9. Criar Symlink SFTP
 
 ```cmd
 cmd /c mklink /D C:\SFTP\htdocs\suporte C:\xampp\htdocs\suporte
@@ -174,7 +200,7 @@ Test-Path C:\SFTP\htdocs\suporte
 
 ---
 
-# Checklist Final
+## Checklist Final
 
 * [x] DNS Cloudflare criado
 * [x] Pasta HTDOCS criada
@@ -187,6 +213,14 @@ Test-Path C:\SFTP\htdocs\suporte
 * [x] Symlink SFTP criado
 * [x] Teste HTTP OK
 * [x] Teste SFTP OK
+
+## Subdomínios Ativos
+
+- https://dansoftech.com.br
+- https://suporte.dansoftech.com.br
+- https://cris.dansoftech.com.br
+- https://tecnetsys.dansoftech.com.br
+- https://formulario.dansoftech.com.br
 
 ## Status Final
 
