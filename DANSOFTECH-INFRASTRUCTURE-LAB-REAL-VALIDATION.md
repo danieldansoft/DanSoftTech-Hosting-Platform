@@ -248,23 +248,23 @@ The DanSoftTech Infrastructure Lab follows a simple engineering principle:
 
 BUILD
 
-&#x20; ↓
+  ↓
 
 CONFIGURE
 
-&#x20; ↓
+  ↓
 
 TEST
 
-&#x20; ↓
+  ↓
 
 VALIDATE
 
-&#x20; ↓
+  ↓
 
 DOCUMENT
 
-&#x20; ↓
+  ↓
 
 PRESERVE EVIDENCE
 
@@ -289,67 +289,67 @@ management workstation.
 
 ```
 
-&#x20;                        INTERNET
+                         INTERNET
 
-&#x20;                           │
+                            │
 
-&#x20;                           │
+                            │
 
-&#x20;                   PUBLIC / FIXED IPv4
+                    PUBLIC / FIXED IPv4
 
-&#x20;                           │
+                            │
 
-&#x20;                           ▼
+                            ▼
 
-&#x20;                   ISP / HUAWEI ROUTER
+                    ISP / HUAWEI ROUTER
 
-&#x20;                           │
+                            │
 
-&#x20;                           │
+                            │
 
-&#x20;                           ▼
+                            ▼
 
-&#x20;                    MIKROTIK RB2011
+                     MIKROTIK RB2011
 
-&#x20;                           │
+                            │
 
-&#x20;                ┌──────────┴──────────┐
+                 ┌──────────┴──────────┐
 
-&#x20;                │                     │
+                 │                     │
 
-&#x20;                ▼                     ▼
+                 ▼                     ▼
 
-&#x20;         MAIN NETWORK          ADMINISTRATION
+          MAIN NETWORK          ADMINISTRATION
 
-&#x20;                │                     │
+                 │                     │
 
-&#x20;                │                     │
+                 │                     │
 
-&#x20;                ▼                     ▼
+                 ▼                     ▼
 
-&#x20;            SERVER2025            SERVER2025
+             SERVER2025            SERVER2025
 
-&#x20;         192.168.18.25          192.200.77.179
+          192.168.18.25          192.200.77.179
 
-&#x20;                │
+                 │
 
-&#x20;                │
+                 │
 
-&#x20;                ▼
+                 ▼
 
-&#x20;          Apache / XAMPP
+           Apache / XAMPP
 
-&#x20;                │
+                 │
 
-&#x20;                ▼
+                 ▼
 
-&#x20;       Cloudflare Tunnel
+        Cloudflare Tunnel
 
-&#x20;                │
+                 │
 
-&#x20;                ▼
+                 ▼
 
-&#x20;             INTERNET
+              INTERNET
 
 
 
@@ -374,53 +374,53 @@ running inside the laboratory infrastructure.
 
 
 
-&#x20;                        INTERNET
+                         INTERNET
 
-&#x20;                           │
+                            │
 
-&#x20;                           ▼
+                            ▼
 
-&#x20;                      CLOUDFLARE
+                       CLOUDFLARE
 
-&#x20;                           │
+                            │
 
-&#x20;                    DNS / TUNNEL
+                     DNS / TUNNEL
 
-&#x20;                           │
+                            │
 
-&#x20;                           ▼
+                            ▼
 
-&#x20;                 CLOUDFLARE TUNNEL
+                  CLOUDFLARE TUNNEL
 
-&#x20;                           │
+                            │
 
-&#x20;                           ▼
+                            ▼
 
-&#x20;                      CLOUDFLARED
+                       CLOUDFLARED
 
-&#x20;                           │
+                            │
 
-&#x20;                           ▼
+                            ▼
 
-&#x20;                     SERVER2025
+                      SERVER2025
 
-&#x20;                           │
+                            │
 
-&#x20;                           ▼
+                            ▼
 
-&#x20;                      APACHE
+                       APACHE
 
-&#x20;                           │
+                            │
 
-&#x20;                           ▼
+                            ▼
 
-&#x20;                      VIRTUALHOST
+                       VIRTUALHOST
 
-&#x20;                           │
+                            │
 
-&#x20;                           ▼
+                            ▼
 
-&#x20;                   C:\\xampp\\htdocs
+                    C:\\xampp\\htdocs
 
 
 ```
@@ -488,41 +488,41 @@ documentation.
 
 ```
 
-&#x20;                   INTERNET
+                    INTERNET
 
-&#x20;                      │
+                       │
 
-&#x20;                      ▼
+                       ▼
 
-&#x20;             PUBLIC IPv4 CONNECTION
+              PUBLIC IPv4 CONNECTION
 
-&#x20;                      │
+                       │
 
-&#x20;                      ▼
+                       ▼
 
-&#x20;                ISP / HUAWEI
+                 ISP / HUAWEI
 
-&#x20;                      │
+                       │
 
-&#x20;                      ▼
+                       ▼
 
-&#x20;                MIKROTIK RB2011
+                 MIKROTIK RB2011
 
-&#x20;                      │
+                       │
 
-&#x20;             ┌────────┴────────┐
+              ┌────────┴────────┐
 
-&#x20;             │                 │
+              │                 │
 
-&#x20;             ▼                 ▼
+              ▼                 ▼
 
-&#x20;       SERVER2025          MANAGEMENT
+        SERVER2025          MANAGEMENT
 
-&#x20;                               │
+                                │
 
-&#x20;                               ▼
+                                ▼
 
-&#x20;                          RYZEN 5X
+                           RYZEN 5X
 
 
 
@@ -549,43 +549,43 @@ The multi-site architecture uses:
 
 Cloudflare
 
-&#x20;    │
+     │
 
-&#x20;    ▼
+     ▼
 
 Cloudflare Tunnel
 
-&#x20;    │
+     │
 
-&#x20;    ▼
+     ▼
 
 SERVER2025
 
-&#x20;    │
+     │
 
-&#x20;    ▼
+     ▼
 
 Apache
 
-&#x20;    │
+     │
 
-&#x20;    ▼
+     ▼
 
 VirtualHosts
 
-&#x20;    │
+     │
 
-&#x20;    ├── Site / Service 01
+     ├── Site / Service 01
 
-&#x20;    ├── Site / Service 02
+     ├── Site / Service 02
 
-&#x20;    ├── Site / Service 03
+     ├── Site / Service 03
 
-&#x20;    ├── Support
+     ├── Support
 
-&#x20;    ├── Forms
+     ├── Forms
 
-&#x20;    └── Other Applications
+     └── Other Applications
 
 ```
 
@@ -627,43 +627,43 @@ the second domain to the same physical SERVER2025 environment.
 
 DanSoftTech.com.br
 
-&#x20;       │
+        │
 
-&#x20;       ├── Cloudflare
+        ├── Cloudflare
 
-&#x20;       ├── Cloudflare Tunnel
+        ├── Cloudflare Tunnel
 
-&#x20;       │
+        │
 
-&#x20;       ▼
+        ▼
 
-&#x20;    SERVER2025
+     SERVER2025
 
-&#x20;       │
+        │
 
-&#x20;       ▼
+        ▼
 
-&#x20;  Apache / XAMPP
+   Apache / XAMPP
 
-&#x20;       │
+        │
 
-&#x20;       ▼
+        ▼
 
-&#x20;   VirtualHosts
+    VirtualHosts
 
-&#x20;       │
+        │
 
-&#x20;       ▼
+        ▼
 
-&#x20;criscerri.com.br
+ criscerri.com.br
 
-&#x20;       │
+        │
 
-&#x20;       ▼
+        ▼
 
-&#x20;Cristiane Cerri
+ Cristiane Cerri
 
-&#x20;Terapia Interativa
+ Terapia Interativa
 
 
 
@@ -695,45 +695,45 @@ SERVER2025 environment through the following components:
 
 criscerri.com.br
 
-&#x20;       │
+        │
 
-&#x20;       ▼
+        ▼
 
 Cloudflare DNS
 
-&#x20;       │
+        │
 
-&#x20;       ▼
+        ▼
 
 Cloudflare Tunnel
 
-&#x20;       │
+        │
 
-&#x20;       ▼
+        ▼
 
 cloudflared
 
-&#x20;       │
+        │
 
-&#x20;       ▼
+        ▼
 
 SERVER2025
 
-&#x20;       │
+        │
 
-&#x20;       ▼
+        ▼
 
 Apache
 
-&#x20;       │
+        │
 
-&#x20;       ▼
+        ▼
 
 VirtualHost
 
-&#x20;       │
+        │
 
-&#x20;       ▼
+        ▼
 
 C:\\xampp\\htdocs
 
@@ -824,15 +824,15 @@ The Apache configuration includes a real VirtualHost for the main
 
 criscerri.com.br
 
-&#x20;       │
+        │
 
-&#x20;       ▼
+        ▼
 
 Apache VirtualHost
 
-&#x20;       │
+        │
 
-&#x20;       ▼
+        ▼
 
 C:\\xampp\\htdocs\\criscerri
 
@@ -874,21 +874,21 @@ The project configuration also documents the `agenda` subdomain:
 
 agenda.criscerri.com.br
 
-&#x20;       │
+        │
 
-&#x20;       ▼
+        ▼
 
 Cloudflare / Tunnel
 
-&#x20;       │
+        │
 
-&#x20;       ▼
+        ▼
 
 Apache
 
-&#x20;       │
+        │
 
-&#x20;       ▼
+        ▼
 
 C:\\xampp\\htdocs\\agenda
 
@@ -1016,19 +1016,19 @@ The laboratory follows the principle:
 
 CONFIGURATION
 
-&#x20;     ↓
+      ↓
 
 SYNTAX VALIDATION
 
-&#x20;     ↓
+      ↓
 
 SERVICE VALIDATION
 
-&#x20;     ↓
+      ↓
 
 EXTERNAL ACCESS TEST
 
-&#x20;     ↓
+      ↓
 
 DOCUMENTATION
 
@@ -1110,37 +1110,37 @@ of the laboratory infrastructure from an external network.
 
 EXTERNAL NETWORK
 
-&#x20;      │
+       │
 
-&#x20;      ▼
+       ▼
 
 PUBLIC IPv4
 
-&#x20;      │
+       │
 
-&#x20;      ▼
+       ▼
 
 ISP / HUAWEI
 
-&#x20;      │
+       │
 
-&#x20;      ▼
+       ▼
 
 MIKROTIK RB2011
 
-&#x20;      │
+       │
 
-&#x20;      ├── Remote Management
+       ├── Remote Management
 
-&#x20;      │
+       │
 
-&#x20;      ▼
+       ▼
 
 SERVER2025
 
-&#x20;      │
+       │
 
-&#x20;      └── Remote Desktop
+       └── Remote Desktop
 
 ```
 
@@ -1214,25 +1214,25 @@ Examples of preserved evidence include:
 
 PORTAS+IPV4.mp4
 
-&#x20;       │
+        │
 
-&#x20;       └── MikroTik remote access through IPv4
+        └── MikroTik remote access through IPv4
 
 
 
 DNS+IPV4+CLOUDFLARED.mp4
 
-&#x20;       │
+        │
 
-&#x20;       └── DNS / IPv4 / Cloudflared demonstration
+        └── DNS / IPv4 / Cloudflared demonstration
 
 
 
 CATALOGO-DANSOFTECH.mp4
 
-&#x20;       │
+        │
 
-&#x20;       └── DanSoftTech infrastructure documentation
+        └── DanSoftTech infrastructure documentation
 
 ```
 
@@ -1256,19 +1256,19 @@ The laboratory follows the principle:
 
 REAL INFRASTRUCTURE
 
-&#x20;       ↓
+        ↓
 
 REAL TEST
 
-&#x20;       ↓
+        ↓
 
 REAL EVIDENCE
 
-&#x20;       ↓
+        ↓
 
 DOCUMENTATION
 
-&#x20;       ↓
+        ↓
 
 HISTORICAL PRESERVATION
 
@@ -1326,51 +1326,51 @@ Cloudflare services.
 
 Physical Infrastructure
 
-&#x20;       ↓
+        ↓
 
 SERVER2025
 
-&#x20;       ↓
+        ↓
 
 MikroTik RouterOS
 
-&#x20;       ↓
+        ↓
 
 Internet / IPv4 Connectivity
 
-&#x20;       ↓
+        ↓
 
 Remote Administration
 
-&#x20;       ↓
+        ↓
 
 Cloudflare DNS
 
-&#x20;       ↓
+        ↓
 
 Cloudflare Tunnel
 
-&#x20;       ↓
+        ↓
 
 Apache / XAMPP
 
-&#x20;       ↓
+        ↓
 
 VirtualHosts
 
-&#x20;       ↓
+        ↓
 
 Multi-Site Hosting
 
-&#x20;       ↓
+        ↓
 
 Second Domain
 
-&#x20;       ↓
+        ↓
 
 criscerri.com.br
 
-&#x20;       ↓
+        ↓
 
 DanSoftTech Infrastructure Lab
 
@@ -1550,35 +1550,35 @@ checklist covering the main components of the physical environment.
 
 PHYSICAL INFRASTRUCTURE
 
-&#x20;         ↓
+          ↓
 
 NETWORK CONFIGURATION
 
-&#x20;         ↓
+          ↓
 
 SERVER CONFIGURATION
 
-&#x20;         ↓
+          ↓
 
 CLOUD SERVICES
 
-&#x20;         ↓
+          ↓
 
 WEB HOSTING
 
-&#x20;         ↓
+          ↓
 
 REMOTE ACCESS
 
-&#x20;         ↓
+          ↓
 
 TECHNICAL VALIDATION
 
-&#x20;         ↓
+          ↓
 
 REAL EVIDENCE
 
-&#x20;         ↓
+          ↓
 
 DOCUMENTATION
 
