@@ -30,15 +30,15 @@ The configurations documented here were implemented on physical hardware and val
 
 
 
-\*\*Project:\*\* DanSoftTech Infrastructure Lab  
+\*\*Project:\*\* DanSoftTech Infrastructure Lab
 
-\*\*Platform:\*\* DanSoftTech Hosting Platform  
+\*\*Platform:\*\* DanSoftTech Hosting Platform
 
-\*\*Author:\*\* Daniel Cerri Ribeiro  
+\*\*Author:\*\* Daniel Cerri Ribeiro
 
-\*\*Organization:\*\* DanSoftTech \& Cobaltech  
+\*\*Organization:\*\* DanSoftTech \& Cobaltech
 
-\*\*Environment:\*\* Physical Infrastructure Laboratory  
+\*\*Environment:\*\* Physical Infrastructure Laboratory
 
 \*\*Validation:\*\* Real Equipment • Real Network • Real Services
 
@@ -243,33 +243,17 @@ The DanSoftTech Infrastructure Lab follows a simple engineering principle:
 
 
 ```
-
-
-
 BUILD
-
   ↓
-
 CONFIGURE
-
   ↓
-
 TEST
-
   ↓
-
 VALIDATE
-
   ↓
-
 DOCUMENT
-
   ↓
-
 PRESERVE EVIDENCE
-
-
-
 ```
 
 
@@ -288,72 +272,37 @@ management workstation.
 
 
 ```
-
                          INTERNET
-
                             │
-
                             │
-
                     PUBLIC / FIXED IPv4
-
                             │
-
                             ▼
-
                     ISP / HUAWEI ROUTER
-
                             │
-
                             │
-
                             ▼
-
                      MIKROTIK RB2011
-
                             │
-
                  ┌──────────┴──────────┐
-
                  │                     │
-
                  ▼                     ▼
-
           MAIN NETWORK          ADMINISTRATION
-
                  │                     │
-
                  │                     │
-
                  ▼                     ▼
-
              SERVER2025            SERVER2025
-
           192.168.18.25          192.200.77.179
-
                  │
-
                  │
-
                  ▼
-
            Apache / XAMPP
-
                  │
-
                  ▼
-
         Cloudflare Tunnel
-
                  │
-
                  ▼
-
               INTERNET
-
-
-
-
 ```
 
 # ☁️ Cloudflare DNS and Tunnel
@@ -371,58 +320,30 @@ running inside the laboratory infrastructure.
 
 
 ```
-
-
-
                          INTERNET
-
                             │
-
                             ▼
-
                        CLOUDFLARE
-
                             │
-
                      DNS / TUNNEL
-
                             │
-
                             ▼
-
                   CLOUDFLARE TUNNEL
-
                             │
-
                             ▼
-
                        CLOUDFLARED
-
                             │
-
                             ▼
-
                       SERVER2025
-
                             │
-
                             ▼
-
                        APACHE
-
                             │
-
                             ▼
-
                        VIRTUALHOST
-
                             │
-
                             ▼
-
                     C:\\xampp\\htdocs
-
-
 ```
 
 
@@ -487,46 +408,24 @@ documentation.
 
 
 ```
-
                     INTERNET
-
                        │
-
                        ▼
-
               PUBLIC IPv4 CONNECTION
-
                        │
-
                        ▼
-
                  ISP / HUAWEI
-
                        │
-
                        ▼
-
                  MIKROTIK RB2011
-
                        │
-
               ┌────────┴────────┐
-
               │                 │
-
               ▼                 ▼
-
         SERVER2025          MANAGEMENT
-
                                 │
-
                                 ▼
-
                            RYZEN 5X
-
-
-
-
 ```
 
 
@@ -546,47 +445,26 @@ The multi-site architecture uses:
 
 
 ```
-
 Cloudflare
-
      │
-
      ▼
-
 Cloudflare Tunnel
-
      │
-
      ▼
-
 SERVER2025
-
      │
-
      ▼
-
 Apache
-
      │
-
      ▼
-
 VirtualHosts
-
      │
-
      ├── Site / Service 01
-
      ├── Site / Service 02
-
      ├── Site / Service 03
-
      ├── Support
-
      ├── Forms
-
      └── Other Applications
-
 ```
 
 
@@ -622,51 +500,26 @@ the second domain to the same physical SERVER2025 environment.
 
 
 ```
-
-
-
 DanSoftTech.com.br
-
         │
-
         ├── Cloudflare
-
         ├── Cloudflare Tunnel
-
         │
-
         ▼
-
      SERVER2025
-
         │
-
         ▼
-
    Apache / XAMPP
-
         │
-
         ▼
-
     VirtualHosts
-
         │
-
         ▼
-
  criscerri.com.br
-
         │
-
         ▼
-
  Cristiane Cerri
-
  Terapia Interativa
-
-
-
 ```
 
 
@@ -692,53 +545,28 @@ SERVER2025 environment through the following components:
 
 
 ```
-
 criscerri.com.br
-
         │
-
         ▼
-
 Cloudflare DNS
-
         │
-
         ▼
-
 Cloudflare Tunnel
-
         │
-
         ▼
-
 cloudflared
-
         │
-
         ▼
-
 SERVER2025
-
         │
-
         ▼
-
 Apache
-
         │
-
         ▼
-
 VirtualHost
-
         │
-
         ▼
-
 C:\\xampp\\htdocs
-
-
-
 ```
 
 
@@ -821,21 +649,13 @@ The Apache configuration includes a real VirtualHost for the main
 
 
 ```
-
 criscerri.com.br
-
         │
-
         ▼
-
 Apache VirtualHost
-
         │
-
         ▼
-
 C:\\xampp\\htdocs\\criscerri
-
 ```
 
 
@@ -871,27 +691,16 @@ The project configuration also documents the `agenda` subdomain:
 
 
 ```
-
 agenda.criscerri.com.br
-
         │
-
         ▼
-
 Cloudflare / Tunnel
-
         │
-
         ▼
-
 Apache
-
         │
-
         ▼
-
 C:\\xampp\\htdocs\\agenda
-
 ```
 
 
@@ -1013,25 +822,15 @@ The laboratory follows the principle:
 
 
 ```
-
 CONFIGURATION
-
       ↓
-
 SYNTAX VALIDATION
-
       ↓
-
 SERVICE VALIDATION
-
       ↓
-
 EXTERNAL ACCESS TEST
-
       ↓
-
 DOCUMENTATION
-
 ```
 
 
@@ -1107,41 +906,23 @@ of the laboratory infrastructure from an external network.
 
 
 ```
-
 EXTERNAL NETWORK
-
        │
-
        ▼
-
 PUBLIC IPv4
-
        │
-
        ▼
-
 ISP / HUAWEI
-
        │
-
        ▼
-
 MIKROTIK RB2011
-
        │
-
        ├── Remote Management
-
        │
-
        ▼
-
 SERVER2025
-
        │
-
        └── Remote Desktop
-
 ```
 
 
@@ -1253,25 +1034,15 @@ The laboratory follows the principle:
 
 
 ```
-
 REAL INFRASTRUCTURE
-
         ↓
-
 REAL TEST
-
         ↓
-
 REAL EVIDENCE
-
         ↓
-
 DOCUMENTATION
-
         ↓
-
 HISTORICAL PRESERVATION
-
 ```
 
 
@@ -1323,57 +1094,31 @@ Cloudflare services.
 
 
 ```
-
 Physical Infrastructure
-
         ↓
-
 SERVER2025
-
         ↓
-
 MikroTik RouterOS
-
         ↓
-
 Internet / IPv4 Connectivity
-
         ↓
-
 Remote Administration
-
         ↓
-
 Cloudflare DNS
-
         ↓
-
 Cloudflare Tunnel
-
         ↓
-
 Apache / XAMPP
-
         ↓
-
 VirtualHosts
-
         ↓
-
 Multi-Site Hosting
-
         ↓
-
 Second Domain
-
         ↓
-
 criscerri.com.br
-
         ↓
-
 DanSoftTech Infrastructure Lab
-
 ```
 
 
@@ -1547,41 +1292,23 @@ checklist covering the main components of the physical environment.
 
 
 ```
-
 PHYSICAL INFRASTRUCTURE
-
           ↓
-
 NETWORK CONFIGURATION
-
           ↓
-
 SERVER CONFIGURATION
-
           ↓
-
 CLOUD SERVICES
-
           ↓
-
 WEB HOSTING
-
           ↓
-
 REMOTE ACCESS
-
           ↓
-
 TECHNICAL VALIDATION
-
           ↓
-
 REAL EVIDENCE
-
           ↓
-
 DOCUMENTATION
-
 ```
 
 
